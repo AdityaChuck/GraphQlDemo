@@ -13,6 +13,7 @@ import MenuBar from "./components/MenuBar";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import SinglePost from './components/SinglePost'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               path="/register"
               component={Register}
             />
+            <Route exact path='/posts/:postId' render={props => <SinglePost {...props}/>}/>
           </Switch>
         </Router>
       </AuthProvider>
